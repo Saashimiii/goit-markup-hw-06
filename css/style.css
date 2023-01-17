@@ -301,6 +301,12 @@ nav {
     height: 24px;
 }
 
+
+ .button-close:hover {
+    fill: #FFFFFF;
+    background-color: #404BBF;
+}
+
 .modal-order-form {
     width: 100%;
   }
@@ -391,6 +397,7 @@ nav {
     font-size: 12px;
     line-height: 16px;
     color: #757575;
+    
   }
   
   .checkbox-label > span {
@@ -399,19 +406,22 @@ nav {
     justify-content: center;
     width: 16px;
     height: 16px;
+    
   
     border: 1.25px solid #2E2F42;
     border-radius: 2px;
     margin-right: 8px;
   
     fill: transparent;
-    background-color: transparent;
+    transition-property: border, background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .modal-check:checked + .checkbox-label > span {
-    background-color: #404BBF;
+    
     border: none;
-    fill: #ffffff;
+    background-color: #404BBF;
   }
 
   .modal-check:focus + .checkbox-label > span {
